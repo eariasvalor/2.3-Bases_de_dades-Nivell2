@@ -1,0 +1,52 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "customerId",
+      "storeId",
+      "placedAt",
+      "mode",
+      "items",
+      "total"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "customerId": {
+        "bsonType": "objectId",
+        "description": "Reference to the customer who placed the order"
+      },
+      "storeId": {
+        "bsonType": "objectId",
+        "description": "Reference to the store managing the order"
+      },
+      "placedAt": {
+        "bsonType": "date",
+        "description": "Date and time when the order was placed"
+      },
+      "mode": {
+        "enum": ["delivery", "pickup"],
+        "description": "Specifies whether the order is for home delivery or in-store pickup"
+      },
+      "items": {
+        "bsonType": "array",
+        "minItems": 1,
+        "items": {
+          "bsonType": "object",
+          "required": [
+            "productId",
+            "productName",
+            "unitPrice",
+            "quantity",
+            "subtotal"
+          ],
+          "properties": {
+            "productId": {
+              "bsonType": "objectId",
+              "description": "Unique identifier of the product"
+            },
+            "productName": {
+              "bsonType": "string",
+              "description": "Product name at the time the order was placed"
+            },

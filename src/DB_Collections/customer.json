@@ -1,0 +1,70 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "name",
+      "surname",
+      "address",
+      "telephone",
+      "registrationDate"
+    ],
+    "properties": {
+      "name": {
+        "bsonType": "string",
+        "description": "Customer's first name."
+      },
+      "surname": {
+        "bsonType": "string",
+        "description": "Customer's surname."
+      },
+      "address": {
+        "bsonType": "object",
+        "required": [
+          "street",
+          "number",
+          "city",
+          "postalCode",
+          "province"
+        ],
+        "properties": {
+          "street": {
+            "bsonType": "string",
+            "description": "Street name."
+          },
+          "number": {
+            "bsonType": "int",
+            "minimum": 1,
+            "description": "Street number."
+          },
+          "floor": {
+            "bsonType": "string",
+            "description": "Floor or apartment identifier (optional)."
+          },
+          "city": {
+            "bsonType": "string",
+            "description": "City name."
+          },
+          "postalCode": {
+            "bsonType": "string",
+            "pattern": "^[0-9]{5}$",
+            "description": "Postal code (5 digits)."
+          },
+          "province": {
+            "bsonType": "string",
+            "description": "Province name."
+          }
+        },
+        "description": "Customer's postal address."
+      },
+      "telephone": {
+        "bsonType": "string",
+        "pattern": "^\\+?[0-9\\-\\s]{6,20}$",
+        "description": "Telephone number (optional +, digits, spaces or dashes)."
+      },
+      "registrationDate": {
+        "bsonType": "date",
+        "description": "Date when the customer was registered."
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "firstName",
+      "lastName",
+      "nif",
+      "phone",
+      "role",
+      "storeId"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "firstName": {
+        "bsonType": "string",
+        "description": "Employee's first name"
+      },
+      "lastName": {
+        "bsonType": "string",
+        "description": "Employee's last name"
+      },
+      "nif": {
+        "bsonType": "string",
+        "pattern": "^[A-Z0-9-]{5,15}$",
+        "description": "Unique personal identifier (e.g., NIF or ID number)"
+      },
+      "phone": {
+        "bsonType": "string",
+        "pattern": "^[0-9+\\-()\\s]{6,20}$",
+        "description": "Employee's phone number"
+      },
+      "role": {
+        "enum": ["cook", "courier"],
+        "description": "Job role of the employee (either cook or courier)"
+      },
+      "storeId": {
+        "bsonType": "objectId",
+        "description": "Reference to the store where the employee works"
+      },
+      "createdAt": {
+        "bsonType": ["date", "null"],
+        "description": "Date when the employee record was created"
+      },
+      "updatedAt": {
+        "bsonType": ["date", "null"],
+        "description

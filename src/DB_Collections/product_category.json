@@ -1,0 +1,23 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "kind",
+      "currentName"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "kind": {
+        "bsonType": "string",
+        "enum": ["pizza"],
+        "description": "Specifies the type of product this category belongs to (currently only 'pizza')"
+      },
+      "currentName": {
+        "bsonType": "string",
+        "description": "Current name of the category"
+      }
+    }
+  }
+}

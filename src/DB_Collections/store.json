@@ -1,0 +1,45 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "address",
+      "postalCode",
+      "city",
+      "province"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "address": {
+        "bsonType": "string",
+        "description": "Street address of the store"
+      },
+      "postalCode": {
+        "bsonType": "string",
+        "pattern": "^[0-9]{4,10}$",
+        "description": "Postal or ZIP code of the store"
+      },
+      "city": {
+        "bsonType": "string",
+        "description": "City where the store is located"
+      },
+      "province": {
+        "bsonType": "string",
+        "description": "Province or region where the store is located"
+      },
+      "phone": {
+        "bsonType": ["string", "null"],
+        "description": "Optional phone number of the store"
+      },
+      "createdAt": {
+        "bsonType": ["date", "null"],
+        "description": "Date when the store record was created"
+      },
+      "updatedAt": {
+        "bsonType": ["date", "null"],
+        "description": "Date when the store record was last updated"
+      }
+    }
+  }
+}

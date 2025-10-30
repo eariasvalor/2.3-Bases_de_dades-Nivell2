@@ -1,0 +1,50 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "name",
+      "description",
+      "imageUrl",
+      "price",
+      "type"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "name": {
+        "bsonType": "string",
+        "description": "Product name"
+      },
+      "description": {
+        "bsonType": "string",
+        "description": "Detailed description of the product"
+      },
+      "imageUrl": {
+        "bsonType": "string",
+        "pattern": "^(http|https)://",
+        "description": "URL of the product image"
+      },
+      "price": {
+        "bsonType": "double",
+        "minimum": 0,
+        "description": "Current price of the product"
+      },
+      "type": {
+        "enum": ["pizza", "burger", "drink"],
+        "description": "Type of product"
+      },
+      "categoryIds": {
+        "bsonType": ["array", "null"],
+        "items": {
+          "bsonType": "objectId"
+        },
+        "description": "List of category IDs (only used for pizzas)"
+      },
+      "createdAt": {
+        "bsonType": ["date", "null"],
+        "description": "Date when the product was created"
+      }
+    }
+  }
+}
