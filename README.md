@@ -68,7 +68,7 @@ All validation schemas are stored in the DB_Collections folder and are automatic
 ---
 
 ### 🍕 `product_category`
-**File:** [`productCategory.json`](DB_Collections/productCategory.json)
+**File:** [`productCategory.json`](DB_Collections/product_category.json)
 
 | Field | Type | Description |
 |--------|------|-------------|
