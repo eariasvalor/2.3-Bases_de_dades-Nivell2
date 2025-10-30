@@ -50,3 +50,61 @@
               "bsonType": "string",
               "description": "Product name at the time the order was placed"
             },
+            "unitPrice": {
+              "bsonType": "double",
+              "minimum": 0,
+              "description": "Unit price of the product at the time of ordering"
+            },
+            "quantity": {
+              "bsonType": "int",
+              "minimum": 1,
+              "description": "Quantity of this product in the order"
+            },
+            "subtotal": {
+              "bsonType": "double",
+              "minimum": 0,
+              "description": "Subtotal for this product (unitPrice * quantity)"
+            }
+          }
+        }
+      },
+      "typeCounts": {
+        "bsonType": "object",
+        "properties": {
+          "pizzas": {
+            "bsonType": "int",
+            "minimum": 0
+          },
+          "burgers": {
+            "bsonType": "int",
+            "minimum": 0
+          },
+          "drinks": {
+            "bsonType": "int",
+            "minimum": 0
+          }
+        },
+        "description": "Counts of product types included in the order"
+      },
+      "total": {
+        "bsonType": "double",
+        "minimum": 0,
+        "description": "Total price of the order"
+      },
+      "delivery": {
+        "bsonType": ["object", "null"],
+        "properties": {
+          "courierId": {
+            "bsonType": "objectId",
+            "description": "Employee (courier) assigned to deliver the order"
+          },
+          "deliveredAt": {
+            "bsonType": "date",
+            "description": "Date and time when the order was delivered"
+          }
+        },
+        "description": "Delivery details (only used when mode = 'delivery')"
+      }
+    }
+  }
+}

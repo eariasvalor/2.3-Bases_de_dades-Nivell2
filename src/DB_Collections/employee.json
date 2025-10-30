@@ -45,4 +45,8 @@
       },
       "updatedAt": {
         "bsonType": ["date", "null"],
-        "description
+        "description": "Date when the employee record was last updated"
+      }
+    }
+  }
+}
