@@ -172,12 +172,3 @@ volumes:
 ```
 
 ---
-
-## ✅ Notes
-
-- Use **camelCase** for all field names.  
-- Keep all schema `.json` files inside the `init/` directory for automatic initialization.  
-- You can inspect and edit collections easily using **MongoDB Compass**.  
-- Make sure MongoDB is running before interacting with your backend application.
-
----
