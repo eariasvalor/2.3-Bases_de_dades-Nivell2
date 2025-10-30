@@ -11,7 +11,7 @@ All validation schemas are stored in the DB_Collections folder and are automatic
 ## 🧩 MongoDB Collections
 
 ### 👤 `customer`
-**File:** `DB_Collections/customer.json`
+**File:** [`customer.json`](DB_Collections/customer.json)
 
 | Field | Type | Description |
 |--------|------|-------------|
@@ -24,7 +24,7 @@ All validation schemas are stored in the DB_Collections folder and are automatic
 ---
 
 ### 🏬 `store`
-**File:** `DB_Collections/store.json`
+**File:** [`store.json`](DB_Collections/store.json)
 
 | Field | Type | Description |
 |--------|------|-------------|
@@ -38,7 +38,7 @@ All validation schemas are stored in the DB_Collections folder and are automatic
 ---
 
 ### 💼 `employee`
-**File:** `DB_Collections/employee.json`
+**File:** [`employee.json`](DB_Collections/employee.json)
 
 | Field | Type | Description |
 |--------|------|-------------|
@@ -53,7 +53,7 @@ All validation schemas are stored in the DB_Collections folder and are automatic
 ---
 
 ### 🍔 `product`
-**File:** `DB_Collections/product.json`
+**File:** [`product.json`](DB_Collections/product.json)
 
 | Field | Type | Description |
 |--------|------|-------------|
@@ -68,7 +68,7 @@ All validation schemas are stored in the DB_Collections folder and are automatic
 ---
 
 ### 🍕 `product_category`
-**File:** `DB_Collections/product_category.json`
+**File:** [`productCategory.json`](DB_Collections/productCategory.json)
 
 | Field | Type | Description |
 |--------|------|-------------|
@@ -78,7 +78,7 @@ All validation schemas are stored in the DB_Collections folder and are automatic
 ---
 
 ### 🧾 `order`
-**File:** `DB_Collections/order.json`
+**File:** [`order.json`](DB_Collections/order.json)
 
 | Field | Type | Description |
 |--------|------|-------------|
